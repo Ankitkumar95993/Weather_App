@@ -110,8 +110,32 @@ function renderWeatherInfo(weatherInfo)                                         
   humidity.innerText = weatherInfo?.main?.humidity;
   cloudiness.innerText = weatherInfo?.clouds?.all;
 
+}
+
+function getlocation()
+{
+  if(navigator.geolocation)
+  {
+    Navigator.geolocation.getCurrentPosition(showPosition);
+  }
+
+  else{
+    //show an alert for no geolocation
+  }
 
 }
 
-const grantAccessButton = document.querySelector
+function showPosition(position)
+{  
+  const userCoordinates = {
+    lat:position.coords.latitude,
+    lon:position.coords.longitude
+   }
 
+   sessionStorage.setItem("user-Coordinates",JSON.stringify(userCoordinates));
+   fetchUserWeatherInfo(userCoordinates);
+
+}
+
+const grantAccessButton = document.querySelector("[data-grantAccess");
+grantAccessButton.addEventListener("click",getlocation);
