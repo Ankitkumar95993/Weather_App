@@ -5,7 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="wrapper">
@@ -25,7 +31,7 @@
             height="80"
             loading="lazy"
           />
-          <p>grant Location Access</p>
+          <p>Grant Location Access</p>
           <p>Allow Access to get weather Information</p>
           <button class="btn" data-grantAccess>Grant Access</button>
         </div>
@@ -44,13 +50,13 @@
         </form>
 
         <!--- loading screen container -->
-        <div class=" sub-container loading-container">
+        <div class="sub-container loading-container">
           <img src="./assets/loading.gif" width="150" height="150" />
           <p>Loading</p>
         </div>
 
         <!-- show weather info -->
-        <div class=" sub-container user-info-container">
+        <div class="sub-container user-info-container">
           <!--city name and Flag-->
           <div class="name">
             <p data-cityName></p>
